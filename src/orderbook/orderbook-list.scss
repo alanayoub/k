@@ -1,0 +1,69 @@
+$bid-color: #990000;
+$ask-color: #00AA33;
+.orderbook-list {
+  width: 230px;
+  height: 450px;
+  cursor: pointer;
+  position: relative;
+  .order-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    &.order-list-asks {
+      top: 0;
+      display: flex;
+      position: relative;
+      flex-direction: column-reverse;
+      .price {
+        color: $bid-color;
+      }
+    }
+    &.order-list-bids {
+      bottom: 0;
+      position: absolute;
+      .price {
+        color: $ask-color;
+      }
+    }
+    .order-list-item {
+      &.order-list-item-active {
+        background: #222;
+      }
+    }
+    .order-amount {
+      width: 85px;
+      display: inline-block;
+      overflow: hidden;
+      text-align: right;
+      vertical-align:top;
+      .lite {
+        opacity: 0.5;
+      }
+    }
+    .price {
+      width: 60px;
+      display: inline-block;
+      overflow: hidden;
+      text-align: right;
+      vertical-align:top;
+      .lite {
+        opacity: 0.6;
+      }
+    }
+  }
+  .fair-price {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    div {
+      padding: 5px 0;
+      font-size: 18px;
+      text-align: center;
+      top: 50%;
+      position: absolute;
+      margin-top: -15px;
+      width: 100%;
+    }
+  }
+}

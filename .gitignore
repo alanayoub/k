@@ -1,0 +1,14 @@
+dist
+node_modules
+*.zip
+
+# Vim
+*~
+*.swp
+*.swo
+*.swm
+*.swn
+*.swl
+*.swk
+*.swj
+*.swi
